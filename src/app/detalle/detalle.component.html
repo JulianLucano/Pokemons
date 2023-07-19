@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row">
+        <div class="contenido">
+            <div class="nombre">Nombre: {{ detallePokemon?.name }} </div>
+            <div class="imagenes">
+                <div class="contenedor-img">
+                    <img [src]="detallePokemon?.sprites?.back_default">
+                </div>
+                <div class="contenedor-img">
+                    <img [src]="detallePokemon?.sprites?.back_female">
+                </div>
+                <div class="contenedor-img">
+                    <img [src]="detallePokemon?.sprites?.back_shiny">
+                </div>
+                <div class="contenedor-img">
+                    <img [src]="detallePokemon?.sprites?.back_shiny_female">
+                </div>
+                <div class="contenedor-img">
+                    <img [src]="detallePokemon?.sprites?.front_default">
+                </div>
+                <div class="contenedor-img">
+                    <img [src]="detallePokemon?.sprites?.front_female">
+                </div>
+                <div class="contenedor-img">
+                    <img [src]="detallePokemon?.sprites?.front_shiny">
+                </div>
+                <div class="contenedor-img">
+                    <img [src]="detallePokemon?.sprites?.front_shiny_female">
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<app-loader *ngIf="this.loaderService.getLoading()"></app-loader>

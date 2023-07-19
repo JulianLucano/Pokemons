@@ -1,0 +1,15 @@
+.contenido{
+    display: block;
+    text-align: center;
+    flex-wrap: wrap;
+}
+.nombre{
+    width: 100%;
+}
+.row{
+    margin-top: 15px;
+}
+.imagenes{
+    display: flex;
+    flex-wrap: wrap;
+}

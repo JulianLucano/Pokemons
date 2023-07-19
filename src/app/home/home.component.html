@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="row">
+        <div class="contenedor-tabla">
+            <table class="table table-bordered table-sm">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Nombre</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let pokemon of listaPokemons; let i = index">
+                        <td>{{i+1}}</td>
+                        <td>{{pokemon.name}}</td>
+                        <td>
+                            <button class="btn btn-primary" (click)="detalle(pokemon.url)">
+                                Detalle
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <div class="contenedor-btns">
+        <button [disabled]="pagAnterior === '' || pagAnterior === null" 
+                class="btn btn-dark" (click)="anterior()">Anterior</button>
+        <button [disabled]="limitePagina >= 500" class="btn btn-dark" (click)="siguiente()">Siguiente</button>
+    </div>
+
+</div>
+<app-loader *ngIf="this.loaderService.getLoading()"></app-loader>

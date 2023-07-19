@@ -1,0 +1,17 @@
+
+.row{
+    margin-top: 25px;
+}
+.contenedor-tabla{
+    display: flex;
+    justify-content: center;
+}
+.table{
+    width: 50%;
+}
+.contenedor-btns{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
